@@ -120,4 +120,9 @@ class UsersController extends AppController
         $this->Flash->success('Você foi deslogado.');
         return $this->redirect($this->Auth->logout());
     }
+
+    public function beforeFilter(\Cake\Event\EventInterface $event)
+    {
+        $this->Auth->allow(['add']);
+    }
 }
