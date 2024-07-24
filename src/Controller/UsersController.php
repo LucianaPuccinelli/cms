@@ -111,7 +111,13 @@ class UsersController extends AppController
                 $this->Auth->setUser($user);
                 return $this->redirect($this->Auth->redirectUrl());
             }
-            $this->Flash->error('Your username or password is incorrect.');
+            $this->Flash->error('Seu email ou senha estão incorretos.');
         }
+    }
+
+    public function logout()
+    {
+        $this->Flash->success('Você foi deslogado.');
+        return $this->redirect($this->Auth->logout());
     }
 }
