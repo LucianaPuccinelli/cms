@@ -55,8 +55,6 @@ class AppController extends Controller
             ]
         ]);
 
-        // Permite a ação display, assim nosso pages controller
-        // continua a funcionar.
         $this->Auth->allow(['display']);
     }
 }
