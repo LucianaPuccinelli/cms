@@ -1,4 +1,3 @@
-<!-- templates/Pages/home.php -->
 <?php echo $this->Html->css('styles.css'); ?>
 
 <div class="container">
