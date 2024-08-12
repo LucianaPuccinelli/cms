@@ -22,7 +22,7 @@
                     echo $this->Form->control('title');
                     echo $this->Form->control('description');
                     echo $this->Form->control('url');
-                    echo $this->Form->control($this->Form->input('tag_string', ['type' => 'text']), ['options' => $tags]);
+                    echo $this->Form->control('tags._ids', ['options' => $tags]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
