@@ -6,6 +6,7 @@
 ?>
 <div class="bookmarks index content">
     <?= $this->Html->link(__('New Bookmark'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Voltar'), '/', ['class' => 'button']) ?>
     <h3><?= __('Bookmarks') ?></h3>
     <div class="table-responsive">
         <table>

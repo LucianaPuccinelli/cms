@@ -10,6 +10,7 @@
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
+            <?= $this->Html->link(__('Voltar'), ['controller' => 'Bookmarks', 'action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $bookmark->id],
