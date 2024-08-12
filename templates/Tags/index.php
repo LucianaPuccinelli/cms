@@ -6,6 +6,7 @@
 ?>
 <div class="tags index content">
     <?= $this->Html->link(__('New Tag'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Voltar'), '/', ['class' => 'button']) ?>
     <h3><?= __('Tags') ?></h3>
     <div class="table-responsive">
         <table>
