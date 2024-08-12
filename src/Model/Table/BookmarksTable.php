@@ -132,19 +132,15 @@ class BookmarksTable extends Table
         $out = [];
         $query = $this->Tags->find()
             ->where(['Tags.title IN' => $new]);
-
-        // Remove tags existentes da lista de novas tags.
         foreach ($query->extract('title') as $existing) {
             $index = array_search($existing, $new);
             if ($index !== false) {
                 unset($new[$index]);
             }
         }
-        // Adiciona tags existentes.
         foreach ($query as $tag) {
             $out[] = $tag;
         }
-        // Adiciona novas tags.
         foreach ($new as $tag) {
             $out[] = $this->Tags->newEntity(['title' => $tag]);
         }
