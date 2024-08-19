@@ -63,7 +63,7 @@
                             <td class="actions">
                                 <?= $this->Html->link(__('Ver'), ['controller' => 'Bookmarks', 'action' => 'view', $bookmarks->id]) ?>
                                 <?= $this->Html->link(__('Editar'), ['controller' => 'Bookmarks', 'action' => 'edit', $bookmarks->id]) ?>
-                                <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Bookmarks', 'action' => 'delete', $bookmarks->id], ['confirm' => __('Você tem certeza que deseja deletar o bookmark {0}?', $bookmarks->id)]) ?>
+                                <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Bookmarks', 'action' => 'delete', $bookmarks->id], ['confirm' => __('Você tem certeza que deseja deletar o bookmark {0}?', $bookmarks->title)]) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

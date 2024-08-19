@@ -14,7 +14,7 @@
             <?= $this->Form->postLink(
                 __('Deletar'),
                 ['action' => 'delete', $bookmark->id],
-                ['confirm' => __('Você tem certeza que deseja deletar o bookmark {0}?', $bookmark->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Você tem certeza que deseja deletar o bookmark {0}?', $bookmark->title), 'class' => 'side-nav-item']
             ) ?>
             <?= $this->Html->link(__('Listar Bookmarks'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>

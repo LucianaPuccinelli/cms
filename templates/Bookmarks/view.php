@@ -10,7 +10,7 @@
             <h4 class="heading"><?= __('Actions') ?></h4>
             <?= $this->Html->link(__('Voltar'), ['controller' => 'Bookmarks', 'action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Editar Bookmark'), ['action' => 'edit', $bookmark->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Deletar Bookmark'), ['action' => 'delete', $bookmark->id], ['confirm' => __('Você tem certeza que deseja deletar o bookmark {0}?', $bookmark->id), 'class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('Deletar Bookmark'), ['action' => 'delete', $bookmark->id], ['confirm' => __('Você tem certeza que deseja deletar o bookmark {0}?', $bookmark->title), 'class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Listar Bookmarks'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Novo Bookmark'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
@@ -73,7 +73,7 @@
                             <td class="actions">
                                 <?= $this->Html->link(__('Ver'), ['controller' => 'Tags', 'action' => 'view', $tags->id]) ?>
                                 <?= $this->Html->link(__('Editar'), ['controller' => 'Tags', 'action' => 'edit', $tags->id]) ?>
-                                <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Tags', 'action' => 'delete', $tags->id], ['confirm' => __('Você tem certeza que deseja deletar a tag {0}?', $tags->id)]) ?>
+                                <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Tags', 'action' => 'delete', $tags->id], ['confirm' => __('Você tem certeza que deseja deletar a tag {0}?', $tags->title)]) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>
