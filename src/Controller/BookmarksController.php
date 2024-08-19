@@ -111,9 +111,21 @@ class BookmarksController extends AppController
     public function tags()
     {
         $tags = $this->request->getParam('pass');
+
+        $searchedTag = $this->request->getQuery('tag');
+        if ($searchedTag) {
+            $tags = [$searchedTag];
+        }
+
+        $allTagsQuery = $this->Bookmarks->Tags->find('all');
+        $allTags = [];
+        foreach ($allTagsQuery as $tag) {
+            $allTags[$tag->title] = $tag->title;
+        }
+
         $bookmarks = $this->Bookmarks->find('tagged', [
             'tags' => $tags
         ]);
-        $this->set(compact('bookmarks', 'tags'));
+        $this->set(compact('bookmarks', 'tags', 'allTags'));
     }
 }
