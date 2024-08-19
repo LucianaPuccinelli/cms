@@ -5,7 +5,7 @@
  */
 ?>
 <div class="tags index content">
-    <?= $this->Html->link(__('New Tag'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Nova Tag'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <?= $this->Html->link(__('Voltar'), '/', ['class' => 'button']) ?>
     <h3><?= __('Tags') ?></h3>
     <div class="table-responsive">
@@ -27,9 +27,9 @@
                     <td><?= h($tag->created) ?></td>
                     <td><?= h($tag->modified) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $tag->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $tag->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $tag->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tag->id)]) ?>
+                        <?= $this->Html->link(__('Ver'), ['action' => 'view', $tag->id]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $tag->id]) ?>
+                        <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $tag->id], ['confirm' => __('Você tem certeza que deseja deletar a tag {0}?', $tag->title)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
