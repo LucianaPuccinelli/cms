@@ -5,7 +5,7 @@
  */
 ?>
 <div class="bookmarks index content">
-    <?= $this->Html->link(__('New Bookmark'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Novo Bookmark'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <?= $this->Html->link(__('Voltar'), '/', ['class' => 'button']) ?>
     <h3><?= __('Bookmarks') ?></h3>
     <div class="table-responsive">
@@ -27,9 +27,9 @@
                     <td><?= h($bookmark->created) ?></td>
                     <td><?= h($bookmark->modified) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $bookmark->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $bookmark->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $bookmark->id], ['confirm' => __('Are you sure you want to delete # {0}?', $bookmark->id)]) ?>
+                        <?= $this->Html->link(__('Ver'), ['action' => 'view', $bookmark->id]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $bookmark->id]) ?>
+                        <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $bookmark->id], ['confirm' => __('Você tem certeza que deseja deletar o bookmark {0}?', $bookmark->id)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
