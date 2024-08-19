@@ -5,7 +5,7 @@
  */
 ?>
 <div class="users index content">
-    <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Novo Usuário'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <?= $this->Html->link(__('Voltar'), '/', ['class' => 'button']) ?>
     <h3><?= __('Users') ?></h3>
     <div class="table-responsive">
@@ -27,9 +27,9 @@
                     <td><?= h($user->created) ?></td>
                     <td><?= h($user->modified) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
+                        <?= $this->Html->link(__('Ver'), ['action' => 'view', $user->id]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $user->id]) ?>
+                        <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $user->id], ['confirm' => __('Você tem certeza que deseja deletar o usuário {0}?', $user->id)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
