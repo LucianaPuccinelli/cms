@@ -5,6 +5,7 @@
     <?= $this->Form->create() ?>
     <?= $this->Form->control('email', ['label' => false, 'placeholder' => 'Email', 'class' => 'login-input']) ?>
     <?= $this->Form->control('password', ['label' => false, 'placeholder' => 'Password', 'class' => 'login-input']) ?>
-    <?= $this->Form->button('Login', ['class' => 'btn-login']) ?>
+    <?= $this->Form->button('Login', ['class' => 'btn-login']) ?><br>
+    <a href="<?= $this->Url->build(['controller' => 'Users', 'action' => 'add']); ?>">Cadastrar</a>
     <?= $this->Form->end() ?>
 </div>
