@@ -5,6 +5,7 @@
  * @var \Cake\Collection\CollectionInterface|string[] $bookmarks
  */
 ?>
+<?php echo $this->Html->css('form-add.css'); ?>
 <div class="row">
     <aside class="column">
         <div class="side-nav">
@@ -20,7 +21,10 @@
                 <legend><?= __('Adicionar Tag') ?></legend>
                 <?php
                     echo $this->Form->control('title');
-                    echo $this->Form->control('bookmarks._ids', ['options' => $bookmarks]);
+                    echo $this->Form->control('bookmarks._ids', [
+                        'type' => 'select',
+                        'options' => $bookmarks,
+                        'label' => __('Bookmarks')]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Enviar')) ?>
