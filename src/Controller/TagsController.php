@@ -22,6 +22,9 @@ class TagsController extends AppController
 
         $this->set(compact('tags'));
     }
+    public $paginate = [
+        'limit' => 5,
+        ];
 
     /**
      * View method

@@ -22,6 +22,9 @@ class UsersController extends AppController
 
         $this->set(compact('users'));
     }
+    public $paginate = [
+        'limit' => 5,
+    ];
 
     /**
      * View method

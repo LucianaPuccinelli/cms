@@ -19,13 +19,13 @@ class BookmarksController extends AppController
     public function index()
     {
         $this->paginate = [
+            'limit' => 5,
             'conditions' => [
                 'Bookmarks.user_id' => $this->Auth->user('id'),
             ]
         ];
         $this->set('bookmarks', $this->paginate($this->Bookmarks));
     }
-
     /**
      * View method
      *
