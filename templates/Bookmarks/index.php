@@ -5,6 +5,7 @@
  */
 ?>
 <?php echo $this->Html->css('paginator.css'); ?>
+<?php echo $this->Html->css('table.css'); ?>
 <div class="bookmarks index content">
     <?= $this->Html->link(__('Novo Bookmark'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <?= $this->Html->link(__('Voltar'), '/', ['class' => 'button']) ?>
