@@ -63,9 +63,9 @@ class TagsTable extends Table
     public function validationDefault(Validator $validator): Validator
     {
         $validator
+            ->notEmptyString('title', 'O campo title é obrigatório')
             ->scalar('title')
             ->maxLength('title', 255)
-            ->allowEmptyString('title')
             ->add('title', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         return $validator;

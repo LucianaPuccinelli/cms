@@ -74,7 +74,7 @@ class BookmarksTable extends Table
         $validator
             ->scalar('title')
             ->maxLength('title', 50)
-            ->allowEmptyString('title');
+            ->notEmptyString('title', 'O campo title é obrigatório');
 
         $validator
             ->scalar('description')
@@ -82,7 +82,7 @@ class BookmarksTable extends Table
 
         $validator
             ->scalar('url')
-            ->allowEmptyString('url');
+            ->notEmptyString('url', 'O campo url é obrigatório');
 
         return $validator;
     }
