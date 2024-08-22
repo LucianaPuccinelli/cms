@@ -4,6 +4,7 @@
  * @var \App\Model\Entity\Bookmark $bookmark
  */
 ?>
+<?php echo $this->Html->css('form-add.css'); ?>
 <div class="row">
     <aside class="column">
         <div class="side-nav">
