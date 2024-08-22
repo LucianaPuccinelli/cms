@@ -4,6 +4,7 @@
  * @var iterable<\App\Model\Entity\Tag> $tags
  */
 ?>
+<?php echo $this->Html->css('paginator.css'); ?>
 <div class="tags index content">
     <?= $this->Html->link(__('Nova Tag'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <?= $this->Html->link(__('Voltar'), '/', ['class' => 'button']) ?>
@@ -38,12 +39,12 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('Primeira') ?>
+            <?= $this->Paginator->prev('<Anterior') ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next('Próxima>') ?>
+            <?= $this->Paginator->last('Última') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Página {{page}} de {{pages}}, mostrando {{current}} item(s) de {{count}} totais')) ?></p>
     </div>
 </div>
