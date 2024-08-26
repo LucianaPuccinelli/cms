@@ -44,23 +44,19 @@
                     <table>
                         <tr>
                             <th><?= __('Id') ?></th>
-                            <th><?= __('User Id') ?></th>
                             <th><?= __('Title') ?></th>
                             <th><?= __('Description') ?></th>
                             <th><?= __('Url') ?></th>
                             <th><?= __('Created') ?></th>
-                            <th><?= __('Modified') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
                         </tr>
                         <?php foreach ($user->bookmarks as $bookmarks) : ?>
                         <tr>
                             <td><?= h($bookmarks->id) ?></td>
-                            <td><?= h($bookmarks->user_id) ?></td>
                             <td><?= h($bookmarks->title) ?></td>
                             <td><?= h($bookmarks->description) ?></td>
                             <td><?= h($bookmarks->url) ?></td>
                             <td><?= h($bookmarks->created) ?></td>
-                            <td><?= h($bookmarks->modified) ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('Ver'), ['controller' => 'Bookmarks', 'action' => 'view', $bookmarks->id]) ?>
                                 <?= $this->Html->link(__('Editar'), ['controller' => 'Bookmarks', 'action' => 'edit', $bookmarks->id]) ?>
