@@ -29,10 +29,7 @@
                     echo $this->Form->control('title');
                     echo $this->Form->control('description');
                     echo $this->Form->control('url');
-                    echo $this->Form->control('tags._ids', [
-                        'options' => $tags,
-                        'type' => 'select',
-                        'label' => __('Tags')]);
+                    echo $this->Form->control('tags._ids', ['options' => $tags]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Enviar')) ?>
