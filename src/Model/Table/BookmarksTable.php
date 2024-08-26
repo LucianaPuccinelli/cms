@@ -132,7 +132,7 @@ class BookmarksTable extends Table
         $out = [];
         $query = $this->Tags->find()
             ->where(['Tags.title IN' => $new]);
-        foreach ($query->extract('title') as $existing) {
+        foreach ($query->all()->extract('title') as $existing) {
             $index = array_search($existing, $new);
             if ($index !== false) {
                 unset($new[$index]);
