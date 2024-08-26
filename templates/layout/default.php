@@ -21,13 +21,14 @@ $cakeDescription = 'Blog';
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>
         <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'fonts', 'cake']) ?>
+    <?= $this->Html->css(['normalize.min', 'milligram.min', 'fonts', 'cake', 'nav-bar']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -36,7 +37,10 @@ $cakeDescription = 'Blog';
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Home</span></a>
+            <a href="<?= $this->Url->build('/') ?>"><span><i class="fas fa-home"></i> Home</span></a>
+        </div>
+        <div class="top-nav-links">
+            <a href="<?= $this->Url->build(['controller' => 'Users', 'action' => 'logout']); ?>"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
         </div>
     </nav>
     <main class="main">
