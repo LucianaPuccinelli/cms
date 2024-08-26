@@ -146,4 +146,11 @@ class BookmarksTable extends Table
         }
         return $out;
     }
+
+    public function findUserBookmarks(Query $query, array $options)
+    {
+        $userId = $options['user_id'];
+        return $query->where(['Bookmarks.user_id' => $userId]);
+    }
+
 }
