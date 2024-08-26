@@ -7,6 +7,5 @@
         <a href="<?= $this->Url->build(['controller' => 'Tags', 'action' => 'index']); ?>" class="btn">Tags</a>
         <a href="<?= $this->Url->build(['controller' => 'Bookmarks', 'action' => 'index']); ?>" class="btn">Bookmarks</a>
         <a href="<?= $this->Url->build(['controller' => 'Bookmarks', 'action' => 'tags']); ?>" class="btn">Procurar bookmarks por tags</a>
-        <a href="<?= $this->Url->build(['controller' => 'Users', 'action' => 'logout']); ?>" class="btn-logout">Sair</a>
     </div>
 </div>
