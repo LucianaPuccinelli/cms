@@ -31,7 +31,7 @@ use Cake\Routing\Router;
   * if required.
  */
 return function (RouteBuilder $routes): void {
-    Router::scope(
+    $routes->scope(
         '/bookmarks',
         ['controller' => 'Bookmarks'],
         function ($routes) {
