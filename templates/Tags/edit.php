@@ -26,7 +26,11 @@
                 <legend><?= __('Editar Tag') ?></legend>
                 <?php
                     echo $this->Form->control('title');
-                    echo $this->Form->control('bookmarks._ids', ['options' => $bookmarks]);
+                    echo $this->Form->control('bookmarks._ids',
+                        ['options' => $bookmarks,
+                        'style' => 'height: auto;',
+                        'size' => 10
+                    ]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Enviar')) ?>
